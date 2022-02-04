@@ -6,7 +6,7 @@
 /*   By: mtournay <mtournay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 12:51:05 by mtournay          #+#    #+#             */
-/*   Updated: 2022/02/02 15:51:37 by mtournay         ###   ########.fr       */
+/*   Updated: 2022/02/04 13:17:48 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int	main(int argc, char **argv)
 	init_mutex(ph, nbr_ph);
 	if (!launch(ph, nbr_ph))
 		return (ft_exit(ph, nbr_ph, 1));
+	usleep(100);
 	while (1)
 	{
 		if (dead(ph, nbr_ph))

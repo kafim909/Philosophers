@@ -6,7 +6,7 @@
 /*   By: mtournay <mtournay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 15:30:35 by mtournay          #+#    #+#             */
-/*   Updated: 2022/02/02 15:50:30 by mtournay         ###   ########.fr       */
+/*   Updated: 2022/02/04 13:17:22 by mtournay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	philo_1(t_philo *ph)
 {
+	pthread_mutex_lock(&ph->t->write);
 	printf("[%8zu] PHILO 1 IS DEAD\n", ph->t->die);
 	ph->t->finished = 1;
-	pthread_mutex_lock(&ph->t->write);
 	pthread_mutex_unlock(&ph->fork);
 	return (1);
 }
